@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- custom css -->
+    <link rel="stylesheet" href="./CSS/style.css">
+    <title>Smart Features</title>
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav class="navbar">
+        <!-- navlink home -->
+        <a class="navbar-link home" href="./index.html">
+            <i class="fa-solid fa-house-chimney navbar-icon"></i>
+        </a>
+
+        <!-- navlink smart -->
+        <a class="navbar-link smart" href="./smart.html">
+            <i class="fa-solid fa-bolt navbar-icon"></i>
+        </a>
+        <!-- navlink controls -->
+
+        <div class="navbar-link controls">
+            <i class="fa-solid fa-temperature-half navbar-icon"></i>
+        </div>
+
+        <!-- navlink profile -->
+        <div class="navbar-link profile">
+            <i class="fa-solid fa-user navbar-icon"></i>
+        </div>
+    </nav>
+    <!-- navbar ends -->
+
+    <!-- main header section -->
+    <section class="main-header-section">
+        <h1 class="main-header">Smart<br>Features</h1>
+        <img src="imgs\heating-company-logo1.png" alt="heating company stylised logo" class="heating-company-logo">
+    </section>
+    <!-- main header section ends -->
+
+    <!-- smart panels section -->
+    <section class="smart-panels-section">
+
+        <!-- smart voice panel -->
+        <div class="smart-voice-panel-cont">
+
+            <!-- smart voice main cont -->
+            <div class="smart-voice-main-cont">
+
+                <!-- subheader -->
+                <h2 class="subheader subheader-voice">Voice Assistant</h2>
+
+                <!-- smart voice body main cont -->
+                <div class="smart-voice-body-cont">
+
+                    <!-- smart voice icon cont -->
+                    <div class="smart-voice-icon-cont">
+
+                        <i class="fa-solid fa-microphone panel-icon"></i>
+                    </div>
+
+                    <!-- smart voice body text cont 1 -->
+                    <div class="smart-voice-text-cont1">
+
+                        <!-- smart voice body text -->
+                        <p class="body-text">
+                            Use the voice feature to help you around the app
+                        </p>
+                    </div>
+
+                    <!-- smart voice body text cont 2 -->
+                    <div class="smart-voice-text-cont2">
+
+                        <!-- smart voice body text -->
+                        <p class="body-text">
+                            How can I help you?<br><br>
+                            Say something...
+                        </p>
+                    </div>
+
+                    <!-- smart voice btn cont -->
+                    <div class="smart-voice-btn-cont">
+
+                        <!-- enter small button -->
+                        <button class="small-orange-btn">
+                            <i class="fa-solid fa-chevron-right white-icon"></i>
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+
+
+    </section>
+    <!-- smart panels section ends -->
+
+    <!-- smart energy panel section -->
+    <section class="smart-energy-section">
+
+        <!-- smart energy main cont -->
+        <div class="smart-energy-main-cont">
+
+            <!-- smart energy subheader -->
+            <h2 class="subheader subheader-voice">Total Energy Usage</h2>
+
+            <!-- smart energy body main cont -->
+            <div class="smart-energy-body-cont">
+
+                <!-- smart energy icons cont -->
+                <div class="smart-energy-body-icons-cont">
+
+                    <!-- smart energy icons -->
+                    <i class="fa-solid fa-house-user panel-energy-icon"></i>
+                    <i class="fa-solid fa-bolt panel-energy-icon"></i>
+                    
+
+                </div>
+
+                <!-- smart energy text cont -->
+                <div class="smart-energy-text-cont">
+
+                    <!-- smart-energy-usage-subheader -->
+                    <h2 class="subheader">
+                        Today<br>
+                        <span class="energy-usage-header-large">10kWh</span>
+                    </h2>
+
+                    <!-- smart energy body text -->
+                    <p class="body-text energy-usage-text-large">
+                        30kWh per week <br>
+                        $1000 per week
+                    </p>
+
+                    <button class="orange-label-btn" id="openModal">See more</button>
+                </div>
+
+            </div>
+
+        </div>
+        
+    </section>
+
+    <dialog id="energyModal" class="energy-modal">
+        <!-- smart energy main cont -->
+        <div class="dialog-main-cont">
+
+            <!-- smart energy subheader -->
+            <h2 class="subheader subheader-voice">Total Energy Usage</h2>
+
+            <!-- smart energy body main cont -->
+            <div class="smart-energy-body-cont">
+
+                <!-- smart energy text cont -->
+                <div class="smart-energy-text-cont">
+
+                    <!-- smart-energy-usage-subheader -->
+                    <h2 class="subheader">
+                        Weekly<br>
+                        <span class="energy-usage-header-large">30kWh</span>
+                    </h2>
+                    
+                    <!-- smart energy body text -->
+                    <p class="body-text energy-usage-text-large">
+                        30kWh per week, 80kWh monthly<br>
+                        $1000 per week, $1500 monthly
+                        
+                    </p>
+
+                    <button class="orange-label-btn" id="closeModal">Close</button>
+
+                </div>
+
+            </div>
+
+        </div>
+    </dialog>
+
+    <!-- home room manager section -->
+    <section class="home-room-section">
+        <!-- home room main cont -->
+        <div class="home-room-main-cont">
+
+            <!-- home room button cont -->
+            <div class="home-room-btn-cont">
+                <!-- home room buttons -->
+                <button class="orange-label-btn small-btn">
+                    Room 1
+                </button>
+
+                <button class="orange-label-btn small-btn">
+                    Room 2
+                </button>
+
+                <button class="orange-label-btn small-btn">
+                    Room 3
+                </button>
+
+                <!-- add small button -->
+                <button class="small-orange-btn">
+                    <i class="fa-solid fa-plus white-icon"></i>
+                </button>
+            </div>
+
+            <!-- home room panel main cont -->
+            <div class="home-room-panel-cont">
+
+                <!-- home room grid cont -->
+                <div class="home-room-panel-grid">
+
+                    <!-- home room grid items -->
+
+                    <!-- home room grid item 1 - heater 1 -->
+                    <div class="home-room-panel-grid-item">
+
+                        <!-- home room panel icon and header -->
+                        <div class="home-room-device-info-cont">
+
+                            <!-- device icon -->
+                            <div class="home-room-device-icon">
+                                
+                                <a href="./heater-details.html" class="heater-1-link">
+                                    <i class="fa-solid fa-wind room-panel-icon"></i>
+                                </a>
+                            </div>
+                            <!-- device subheader -->
+                            <div class="main-subheader">
+                                
+                                <a href="./heater-details.html" class="heater-1-link">
+                                    <h2 class="subheader">Heater 1</h2>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- home room panel power button cont -->
+                        <div class="home-room-device-btn-cont">
+
+                            <!-- home room panel power button -->
+                            <button class="blue-icon-btn">
+                                <i class="fa-solid fa-power-off white-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- home room grid item 2 - vent 1 -->
+                    <div class="home-room-panel-grid-item">
+
+                        <!-- home room panel icon and header -->
+                        <div class="home-room-device-info-cont">
+
+                            <!-- device icon -->
+                            <div class="home-room-device-icon">
+                                <i class="fa-solid fa-fan room-panel-icon"></i>
+                            </div>
+                            <!-- device subheader -->
+                            <div class="main-subheader">
+                                <h2 class="small-subheader">Ventilation 1</h2>
+                            </div>
+                        </div>
+
+                        <!-- home room panel power button cont -->
+                        <div class="home-room-device-btn-cont">
+
+                            <!-- home room panel power button -->
+                            <button class="blue-icon-btn">
+                                <i class="fa-solid fa-power-off white-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- home room grid item 3 - add device -->
+                    <div class="home-room-panel-grid-item">
+
+                        <!-- home room panel icon and header -->
+                        <div class="home-room-device-info-cont">
+
+                            <!-- device subheader -->
+                            <div class="main-subheader">
+                                <h2 class="subheader add-device">Add Device</h2>
+                            </div>
+                        </div>
+
+                        <!-- home room panel power button cont -->
+                        <div class="home-room-device-btn-cont">
+
+                            <!-- home room panel add button -->
+                            <button class="blue-icon-btn">
+                                <i class="fa-solid fa-plus white-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- home room manager section ends-->
+
+
+    <!-- font awesome script -->
+    <script src="https://kit.fontawesome.com/42e32376cc.js" crossorigin="anonymous"></script>
+
+    <!-- custom js script -->
+    <script src="./JS/script.js"></script>
+</body>
+
+</html>

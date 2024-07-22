@@ -1,0 +1,85 @@
+// variables for heating company app
+// colours
+$header-fnt-color: #FF7144;
+$light-orange-colour: #FF9A61;
+$label-fnt-color: #0D121C;
+$body-fnt-color: #5277CE;
+$light-blue-color: #99B1E9;
+$element-white: #F9F3EF;
+
+// font families
+$header-font-family: "Karla",
+sans-serif;
+$body-font-family: "Lexend Deca",
+sans-serif;
+
+// font sizes
+$header-fnt-size: 2.875em;
+$subheader-fnt-size: 1.75em;
+$small-subheader-size: 1.3em;
+$body-fnt-size: 1.125em;
+
+// font weight
+$header-fnt-weight: 800;
+$subheader-fnt-weight: 700;
+
+$body-fnt-weight: 500;
+
+// measurements
+// $section-margin: 0 2.5625em 0 2.5625em;
+$section-margin-bottom: 3%;
+$panel-border-radius: 1.875em;
+$panel-padding: 3%;
+
+
+// mixins for heating company app
+
+// body text styling
+@mixin body-text-style($color, $font-size, $font-family, $font-weight) {
+    color: $body-fnt-color;
+    font-size: $body-fnt-size;
+    font-family: $body-font-family;
+    font-weight: $body-fnt-weight;
+}
+
+// example
+// @include body-text-style ($body-fnt-color, $body-fnt-size, $body-font-family, $body-fnt-weight);
+
+// white panel styling
+@mixin white-panel-styling ($background-color, $border-radius, $padding) {
+    background-color: $element-white;
+    border-radius: $panel-border-radius;
+    $padding: $panel-padding;
+}
+
+// example
+// @include white-panel-styling ($header-fnt-color, $panel-border-radius, $panel-padding);
+
+// neumorphism panel styling
+@mixin neumorphism-panel-styling ($box-shadow, $box-shadow-2) {
+    box-shadow: 15px 15px 34px #c7c2bf;
+    box-shadow: -15px -15px 34px #ffffff;
+}
+
+// example
+// @include neumorphism-panel-styling (15px 15px 34px #c7c2bf, -15px -15px 34px #ffffff);
+
+// neumorphism orange button styling
+@mixin neumorphism-orange-btn ($background, $box-shadow, $box-shadow-2) {
+    background: linear-gradient(145deg, #ffa568, #e68b57);
+    box-shadow: 6px 6px 12px #cc7b4e;
+    box-shadow: 6px 6px 12px #ffb974;
+}
+
+// example
+// @include neumorphism-orange-btn (linear-gradient(145deg, #ffa568, #e68b57), 6px -6px 12px #cc7b4e, -6px 6px 12px #ffb974);
+
+// neumorphism blue button styling
+@mixin neumorphism-blue-btn ($background, $box-shadow, $box-shadow-2) {
+    background: linear-gradient(45deg, #a4bdf9, #8a9fd2);
+    box-shadow: 6px 6px 12px #7a8eba;
+    box-shadow: 6px 6px 12px #b8d4ff;
+}
+
+// example
+// @include neumorphism-blue-btn (linear-gradient(145deg, #ffa568, #e68b57), 6px -6px 12px #7a8eba, -6px 6px 12px #b8d4ff);

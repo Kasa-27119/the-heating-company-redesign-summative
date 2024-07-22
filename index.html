@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- custom css -->
+    <link rel="stylesheet" href="./CSS/style.css">
+    <title>Home</title>
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav class="navbar">
+        <!-- navlink home -->
+        <a class="navbar-link home" href="./index.html">
+            <i class="fa-solid fa-house-chimney navbar-icon"></i>
+        </a>
+
+        <!-- navlink smart -->
+        <a class="navbar-link smart" href="./smart.html">
+            <i class="fa-solid fa-bolt navbar-icon"></i>
+        </a>
+        <!-- navlink controls -->
+
+        <div class="navbar-link controls">
+            <i class="fa-solid fa-temperature-half navbar-icon"></i>
+        </div>
+
+        <!-- navlink profile -->
+        <div class="navbar-link profile">
+            <i class="fa-solid fa-user navbar-icon"></i>
+        </div>
+    </nav>
+    <!-- navbar ends -->
+
+    <!-- main header section -->
+    <section class="main-header-section">
+        <h1 class="main-header">Welcome Home,<br>John!</h1>
+        <img src="imgs\heating-company-logo1.png" alt="heating company stylised logo" class="heating-company-logo">
+    </section>
+    <!-- main header section -->
+
+    <!-- home panels section -->
+    <section class="home-panels-section">
+        <!-- home panels container -->
+        <div class="home-panels-cont">
+
+            <!-- home notifications -->
+            <div class="home-notifs-cont">
+                <h2 class="subheader subheader-voice">Notifications</h2>
+
+                <!-- home notifs body text cont -->
+                <div class="home-notifs-list-cont">
+                    <div class="home-notifs-icon-cont">
+                        <i class="fa-solid fa-bell panel-icon"></i>
+                    </div>
+
+                    <!-- home notif left list -->
+                    <ul class="home-notif-list">
+                        <li class="body-text">9:48pm</li>
+                        <li class="body-text">10:30pm</li>
+                    </ul>
+
+                    <!-- home notif right list -->
+                    <ul class="home-notif-list">
+                        <li class="body-text">Heater 1 turned on</li>
+                        <li class="body-text">Heater 1 turned off</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- small home container -->
+            <div class="home-panels-small-cont">
+
+                <!-- home weather cont -->
+                <div class="home-weather-cont">
+
+                    <!-- home weather icon -->
+                    <div class="home-panel-icon-cont white-panel">
+                        <i class="fa-solid fa-cloud-showers-heavy panel-icon"></i>
+                    </div>
+
+                    <!-- home weather info -->
+                    <div class="home-panel-text-cont">
+                        <p class="body-text">
+                            <span id="temp-fnt-size">12°</span><br>
+                            Rainy<br>
+                            Light showers
+                        </p>
+                    </div>
+                </div>
+
+                <!-- home help -->
+                <div class="home-help-cont">
+
+                    <!-- home help icon -->
+                    <div class="home-panel-icon-cont">
+                        <i class="fa-solid fa-question panel-icon"></i>
+                    </div>
+                    <div class="home-panel-text-cont">
+                        <p class="body-text">
+                            Need help?
+                            Contact our support now!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- home panels section ends -->
+
+    <!-- home room manager section -->
+    <section class="home-room-section">
+        <!-- home room main cont -->
+        <div class="home-room-main-cont">
+
+            <!-- home room button cont -->
+            <div class="home-room-btn-cont">
+                <!-- home room buttons -->
+                <button class="orange-label-btn small-btn">
+                    Room 1
+                </button>
+
+                <button class="orange-label-btn small-btn">
+                    Room 2
+                </button>
+
+                <button class="orange-label-btn small-btn">
+                    Room 3
+                </button>
+
+                <!-- add small button -->
+                <button class="small-orange-btn">
+                    <i class="fa-solid fa-plus white-icon"></i>
+                </button>
+            </div>
+
+            <!-- home room panel main cont -->
+            <div class="home-room-panel-cont">
+
+                <!-- home room grid cont -->
+                <div class="home-room-panel-grid">
+
+                    <!-- home room grid items -->
+
+                    <!-- home room grid item 1 - heater 1 -->
+                    <div class="home-room-panel-grid-item">
+
+                        <!-- home room panel icon and header -->
+                        <div class="home-room-device-info-cont">
+
+                            <!-- device icon -->
+                            <div class="home-room-device-icon">
+                                
+                                <a href="./heater-details.html" class="heater-1-link">
+                                    <i class="fa-solid fa-wind room-panel-icon"></i>
+                                </a>
+                            </div>
+                            <!-- device subheader -->
+                            <div class="main-subheader">
+                                
+                                <a href="./heater-details.html" class="heater-1-link">
+                                    <h2 class="subheader">Heater 1</h2>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- home room panel power button cont -->
+                        <div class="home-room-device-btn-cont">
+
+                            <!-- home room panel power button -->
+                            <button class="blue-icon-btn">
+                                <i class="fa-solid fa-power-off white-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- home room grid item 2 - vent 1 -->
+                    <div class="home-room-panel-grid-item">
+
+                        <!-- home room panel icon and header -->
+                        <div class="home-room-device-info-cont">
+
+                            <!-- device icon -->
+                            <div class="home-room-device-icon">
+                                <i class="fa-solid fa-fan room-panel-icon"></i>
+                            </div>
+                            <!-- device subheader -->
+                            <div class="main-subheader">
+                                <h2 class="small-subheader">Ventilation 1</h2>
+                            </div>
+                        </div>
+
+                        <!-- home room panel power button cont -->
+                        <div class="home-room-device-btn-cont">
+
+                            <!-- home room panel power button -->
+                            <button class="blue-icon-btn">
+                                <i class="fa-solid fa-power-off white-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- home room grid item 3 - add device -->
+                    <div class="home-room-panel-grid-item">
+
+                        <!-- home room panel icon and header -->
+                        <div class="home-room-device-info-cont">
+
+                            <!-- device subheader -->
+                            <div class="main-subheader">
+                                <h2 class="subheader add-device">Add Device</h2>
+                            </div>
+                        </div>
+
+                        <!-- home room panel power button cont -->
+                        <div class="home-room-device-btn-cont">
+
+                            <!-- home room panel add button -->
+                            <button class="blue-icon-btn">
+                                <i class="fa-solid fa-plus white-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- home room manager section ends-->
+
+
+    <!-- font awesome script -->
+    <script src="https://kit.fontawesome.com/42e32376cc.js" crossorigin="anonymous"></script>
+
+    <!-- custom js script -->
+
+</body>
+
+</html>

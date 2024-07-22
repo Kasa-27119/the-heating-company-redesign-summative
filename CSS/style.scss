@@ -1,0 +1,1612 @@
+// import google fonts
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
+
+// import variables and mixins
+@import "variables.scss";
+
+
+// global reset
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+}
+
+// global reset ends
+
+// body & global styles
+body {
+    height: 100%;
+    background-attachment: fixed;
+
+    background: rgb(205, 216, 243);
+    background: linear-gradient(0deg, rgba(205, 216, 243, 1) 0%, rgba(255, 241, 233, 1) 50%, rgba(249, 243, 239, 1) 100%);
+
+    // body text
+    .body-text {
+        @include body-text-style ($body-fnt-color, $body-fnt-size, $body-font-family, $body-fnt-weight);
+    }
+
+    // main header
+    .main-header {
+        font-size: $header-fnt-size;
+        color: $header-fnt-color;
+        font-family: $header-font-family;
+        font-weight: $header-fnt-weight;
+    }
+
+    // subheader 
+    .subheader {
+        font-size: $subheader-fnt-size;
+        font-family: $header-font-family;
+        font-weight: $subheader-fnt-weight;
+    }
+
+    // smaller subheader 
+    .small-subheader {
+        color: $label-fnt-color;
+        font-size: $small-subheader-size;
+        font-family: $header-font-family;
+        font-weight: $subheader-fnt-weight;
+
+    }
+
+    // lists
+    li {
+        list-style: none;
+    }
+
+    .fa-solid,
+    .subheader {
+        color: $label-fnt-color;
+    }
+
+    .white-icon {
+        color: $label-fnt-color;
+    }
+
+    .panel-icon {
+        font-size: 4em;
+    }
+
+    .room-panel-icon {
+        font-size: 4.8em;
+    }
+
+    // orange text button
+    .orange-label-btn {
+        color: $element-white;
+        font-family: $header-font-family;
+        font-size: 1.5em;
+        font-weight: $subheader-fnt-weight;
+        background-color: $light-orange-colour;
+        border-radius: $panel-border-radius;
+
+        @include neumorphism-orange-btn (linear-gradient(145deg, #ffa568, #e68b57), 6px -6px 12px #cc7b4e, -6px 6px 12px #ffb974);
+
+
+
+    }
+
+    // small orange icon button
+    .small-orange-btn {
+        color: $element-white;
+        font-size: 1.3em;
+        background-color: $light-orange-colour;
+        border-radius: 100%;
+        padding: 2.6% 3%;
+
+        @include neumorphism-orange-btn (linear-gradient(145deg, #ffa568, #e68b57), 6px -6px 12px #cc7b4e, -6px 6px 12px #ffb974);
+    }
+
+
+}
+
+// DEFAULT
+// MOBILE BREAKPOINT - 640px x 1211px
+
+// added max-width to fix mobile responsiveness
+@media screen and (max-width: 640px) {
+
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-attachment: fixed;
+        
+
+        section {
+            width: 85%;
+        }
+
+        // navbar
+        .navbar {
+            height: 7.5em;
+            width: 100%;
+            background-color: $element-white;
+            position: fixed;
+            bottom: 0;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+
+            @include neumorphism-panel-styling (15px 15px 34px #c7c2bf, -15px -15px 34px #ffffff);
+
+            // navbar links
+            .navbar-link {
+                width: 5em;
+                height: 5em;
+                text-decoration: none;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .navbar-icon {
+                    font-size: 3.75em;
+                }
+            }
+        }
+
+        // main top header
+        .main-header-section {
+            margin: 5% 0;
+
+            display: flex;
+            justify-content: space-between;
+
+            // heating company logo
+            .heating-company-logo {
+                width: 5em;
+                height: 5em;
+            }
+        }
+
+        // home page styling
+
+        // home top panels section
+        .home-panels-section {
+            margin-bottom: 3%;
+
+            // home panels main cont
+            .home-panels-cont {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                // home notification cont
+                .home-notifs-cont {
+                    margin-bottom: 3%;
+                    width: 100%;
+                    padding: $panel-padding;
+
+                    @include white-panel-styling ($element-white, $panel-border-radius, $panel-padding);
+
+                    @include neumorphism-panel-styling (15px 15px 34px #c7c2bf, -15px -15px 34px #ffffff);
+
+                    .subheader-voice {
+                        width: 100%;
+                        padding-left: 5%;
+                    }
+
+                    // home notifs list cont
+                    .home-notifs-list-cont {
+                        display: flex;
+                        justify-content: space-around;
+                        align-items: center;
+
+
+                        // home notif lists
+                        .home-notif-list {
+                            width: 28%;
+                        }
+
+                    }
+                }
+
+                // home weather & help main cont
+                .home-panels-small-cont {
+                    width: 100%;
+                    height: 9.75em;
+                    display: flex;
+                    justify-content: space-between;
+
+                    // home weather and help cont
+                    .home-weather-cont,
+                    .home-help-cont {
+                        width: 48%;
+                        height: 100%;
+                        padding: $panel-padding;
+                        margin-bottom: 5%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-around;
+
+                        @include white-panel-styling ($element-white, $panel-border-radius, $panel-padding);
+
+                        @include neumorphism-panel-styling (15px 15px 34px #c7c2bf, -15px -15px 34px #ffffff);
+
+                        .home-panel-icon-cont {
+                            width: 50%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-around;
+                        }
+
+                        .home-panel-text-cont {
+                            width: 50%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-around;
+
+                            #temp-fnt-size {
+                                font-size: 3em;
+                                color: $label-fnt-color;
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+
+        // home room manager section
+        .home-room-section {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 30%;
+
+            @include white-panel-styling ($element-white, $panel-border-radius, $panel-padding);
+
+            @include neumorphism-panel-styling (15px 15px 34px #c7c2bf, -15px -15px 34px #ffffff);
+
+            .home-room-main-cont {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                // home room buttons cont
+                .home-room-btn-cont {
+                    width: 100%;
+                    overflow-x: auto;
+                    margin: 3% 0;
+                    display: flex;
+                    justify-content: space-around;
+
+                    // small label btn size
+                    .small-btn {
+                        padding: 2% 5%;
+                        margin-left: 15px;
+
+                        @include neumorphism-orange-btn (linear-gradient(145deg, #ffa568, #e68b57), 6px -6px 12px #cc7b4e, -6px 6px 12px #ffb974);
+                    }
+
+                    .small-orange-btn {
+                        margin-left: 15px;
+                    }
+
+                }
+
+                // home room grid cont
+                .home-room-panel-cont {
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+
+                    // home room grid
+                    .home-room-panel-grid {
+                        width: 90%;
+                        height: auto;
+                        display: grid;
+                        justify-content: center;
+                        margin: 1.25em 1em;
+                        grid-template-columns: repeat(1, 80%);
+                        row-gap: 1.5625em;
+                        column-gap: 0.8125em;
+
+                        // home room grid item cont
+                        .home-room-panel-grid-item {
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-around;
+                            padding: $panel-padding;
+
+                            @include white-panel-styling ($element-white, $panel-border-radius, $panel-padding);
+
+                            @include neumorphism-panel-styling (15px 15px 34px #c7c2bf, -15px -15px 34px #ffffff);
+
+                            .home-room-device-info-cont,
+                            .home-room-device-btn-cont {
+                                height: 90%;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                justify-content: space-around;
+
+                            }
+
+                            .home-room-device-info-cont {
+                                width: 60%;
+
+                                .heater-1-link {
+                                    text-decoration: none;
+                                }
+
+                                .add-device {
+                                    text-align: center;
+                                }
+                            }
+
+                            .home-room-device-btn-cont {
+                                width: 40%;
+
+                                .blue-icon-btn {
+                                    width: 3.125em;
+                                    height: 3.125em;
+                                    font-size: 1.3em;
+                                    border-radius: 100%;
+                                    color: #e68b57;
+                                    box-shadow: 6px 6px 12px #7a8eba;
+
+                                    .fa-solid {
+                                        font-size: 2em;
+                                    }
+
+
+                                    // @include neumorphism-blue-btn (linear-gradient(145deg, #ffa568, #e68b57), 6px 6px 12px #7a8eba, 6px 6px 12px #b8d4ff);
+
+
+                                    // background-color: #99B1E9;
+                                    transition: background-color 0.2s ease;
+                                }
+                            }
+                        }
+                    }
+                }
+
+
+
+            }
+        }
+
+        // home room section ends
+        // home page styling ends
+
+
+        // heater details page styling
+        // heater details header
+        .main-header-icon-cont {
+            display: flex;
+            align-items: center;
+            width: 70%;
+
+            .back-button-link {
+                margin-right: 7%;
+
+                .fa-arrow-left {
+                    font-size: 3.125em;
+                }
+            }
+
+        }
+
+        // heater details section
+        // heater control section 
+        .heater-controls-section {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+
+            // heater controls main cont
+            .heater-controls-main-cont {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-around;
+                width: 33.875em;
+                padding: 3% 0;
+
+                @include white-panel-styling ($element-white, $panel-border-radius, $panel-padding);
+
+                @include neumorphism-panel-styling (15px 15px 34px #c7c2bf, -15px -15px 34px #ffffff);
+
+                // heater dial cont
+                .heater-dial-main-cont {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-around;
+
+                }
+
+                // heater dials
+                .heater-cold-dial-cont,
+                .heater-hot-dial-cont {
+                    width: 16em;
+                    height: 16em;
+                    // display: none;
+                }
+
+                // .heater-hot-dial-cont{
+
+                // }
+
+                // heater power main cont 
+                .heater-power-main-cont {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;
+
+                    .power-on-btn-img {
+                        width: 80px;
+                        height: 80px;
+                    }
+
+                }
+
+            }
+
+        }
+
+        // heater controls section ends
+
+        // heater activity section
+        .heater-activity-section {
+            width: 85%;
+            margin: 4% 0;
+            display: flex;
+            align-items: center;
+            padding: $panel-padding;
+
+            @include white-panel-styling ($element-white, $panel-border-radius, $panel-padding);
+
+            @include neumorphism-panel-styling (15px 15px 34px #c7c2bf, -15px -15px 34px #ffffff);
+
+            // heater activity icons cont
+            .heater-activity-icons-cont {
+                width: 40%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            // heater activity text cont
+            .heater-activity-text-cont {
+                width: 60%;
+                padding-left: 7%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+
+            }
+
+        }
+
+        // heater activity section ends
+
+        // heater energy suggestions section
+        .heater-energy-section {
+            margin-top: 2%;
+            padding-bottom: 25%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            // heater energy main grid
+            .heater-energy-main-grid {
+                display: grid;
+                height: auto;
+                grid-template-columns: repeat(1, 14.875em);
+                grid-template-rows: repeat(2, 14.4375em);
+                column-gap: 1.875em;
+                row-gap: 1.875em;
+
+                // heater energy grid item 
+                .heater-energy-panel-grid-item {
+                    padding: $panel-padding;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    @include white-panel-styling ($element-white, $panel-border-radius, $panel-padding);
+
+                    @include neumorphism-panel-styling (15px 15px 34px #c7c2bf, -15px -15px 34px #ffffff);
+
+                    .heater-energy-btn-cont {
+                        margin-top: 7%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+
+
+                        // small add button
+                        .small-orange-btn {
+                            padding: 3% 4%;
+                        }
+                    }
+
+                    // heater energy icon & text main cont
+                    .heater-energy-icon-text-main-cont {
+                        margin: 5% 0;
+                        display: flex;
+                        align-items: center;
+
+                        // heater energy text cont
+                        .heater-energy-text-cont {
+                            width: 60%;
+                        }
+
+                        // heater energy icon cont
+                        .heater-energy-icon-cont {
+                            width: 40%;
+                            display: flex;
+                            justify-content: center;
+
+                            .fa-leaf {
+                                font-size: 3.75em;
+                            }
+
+                        }
+                    }
+
+
+
+                }
+            }
+        }
+
+        // heater energy suggestions section ends
+
+        // heater details page styling ends
+
+        // smart features page styling
+
+        // smart panels section
+        .smart-panels-section {
+
+            .smart-voice-panel-cont {
+
+                .smart-voice-main-cont {
+                    padding: $panel-padding;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    @include white-panel-styling ($header-fnt-color, $panel-border-radius, $panel-padding);
+
+                    @include neumorphism-panel-styling (15px 15px 34px #c7c2bf, -15px -15px 34px #ffffff);
+
+                    .subheader-voice {
+                        width: 100%;
+                        padding-left: 5%;
+                    }
+
+                    .smart-voice-body-cont {
+                        width: 100%;
+                        padding: 2%;
+                        display: flex;
+                        align-items: center;
+
+                        .smart-voice-icon-cont,
+                        .smart-voice-text-cont1,
+                        .smart-voice-text-cont2,
+                        .smart-voice-btn-cont {
+                            display: flex;
+                            align-items: center;
+
+                            .small-orange-btn {
+                                width: 50px;
+                                height: 50px;
+
+
+                            }
+                        }
+
+                        .smart-voice-icon-cont {
+                            width: 15%;
+                            justify-content: flex-start;
+                        }
+
+                        .smart-voice-text-cont1,
+                        .smart-voice-text-cont2,
+                        .smart-voice-btn-cont {
+                            justify-content: center;
+                        }
+
+                        .smart-voice-text-cont1 {
+                            width: 40%;
+                        }
+
+                        .smart-voice-text-cont2 {
+                            width: 45%;
+                        }
+
+                        .smart-voice-btn-cont {
+                            width: 20%;
+                        }
+
+                    }
+
+
+                }
+            }
+        }
+
+        // smart panels section ends
+
+        // smart energy section
+        .smart-energy-section {
+            margin-bottom: 3%;
+            @include white-panel-styling ($header-fnt-color, $panel-border-radius, $panel-padding);
+
+            @include neumorphism-panel-styling (15px 15px 34px #c7c2bf, -15px -15px 34px #ffffff);
+
+            // smart enrgy main cont
+            .smart-energy-main-cont {
+                width: 100%;
+                padding: $panel-padding;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+
+                // smart energy main subheader
+                .subheader-voice {
+                    padding-left: 5%;
+                    width: 100%;
+                }
+
+                // smart energy body content cont
+                .smart-energy-body-cont {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+
+                    .smart-energy-body-icons-cont,
+                    .smart-energy-text-cont {
+                        display: flex;
+                        justify-content: space-around;
+                        // align-items: center;
+                    }
+
+                    // smart energy icons cont
+                    .smart-energy-body-icons-cont {
+                        width: 50%;
+
+                        // smart energy icons
+                        .panel-energy-icon {
+                            font-size: 5em;
+                        }
+                    }
+
+                    // smart energy text cont
+                    .smart-energy-text-cont {
+                        width: 50%;
+                        flex-direction: column;
+                        padding-left: 10%;
+
+                        .orange-label-btn {
+                            margin-top: 8%;
+                            padding: 2%;
+                            width: 70%;
+                        }
+                    }
+
+                }
+
+            }
+        }
+
+        // smart  panels section ends
+
+        // dialog styling
+        .dialog-main-cont {
+            padding: 5%;
+
+            position: fixed;
+            z-index: 20;
+            top: 40%;
+            left: 25%;
+
+
+            background-color: $element-white;
+            box-shadow: 15px 15px 34px #c7c2bf;
+            border-radius: $panel-border-radius;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+
+
+            #energy-usage-header-large {
+                margin-bottom: 4%;
+            }
+
+            .orange-label-btn {
+                width: 40%;
+            }
+        }
+
+        // dialog styling ends
+
+
+
+        // smart features page styling ends
+
+    }
+
+}
+
+@media screen and (min-width: 640px) {
+
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-attachment: fixed;
+        
+
+        section {
+            width: 85%;
+        }
+
+        // navbar
+        .navbar {
+            height: 7.5em;
+            width: 100%;
+            background-color: $element-white;
+            position: fixed;
+            bottom: 0;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+
+            @include neumorphism-panel-styling (15px 15px 34px #c7c2bf, -15px -15px 34px #ffffff);
+
+            // navbar links
+            .navbar-link {
+                width: 5em;
+                height: 5em;
+                text-decoration: none;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .navbar-icon {
+                    font-size: 3.75em;
+                }
+            }
+        }
+
+        // main top header
+        .main-header-section {
+            margin: 5% 0;
+
+            display: flex;
+            justify-content: space-between;
+
+            // heating company logo
+            .heating-company-logo {
+                width: 5em;
+                height: 5em;
+            }
+        }
+
+        // home page styling
+
+        // home top panels section
+        .home-panels-section {
+            margin-bottom: 3%;
+
+            // home panels main cont
+            .home-panels-cont {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                // home notification cont
+                .home-notifs-cont {
+                    margin-bottom: 3%;
+                    width: 100%;
+                    padding: $panel-padding;
+
+                    @include white-panel-styling ($element-white, $panel-border-radius, $panel-padding);
+
+                    @include neumorphism-panel-styling (15px 15px 34px #c7c2bf, -15px -15px 34px #ffffff);
+
+                    .subheader-voice {
+                        width: 100%;
+                        padding-left: 5%;
+                    }
+
+                    // home notifs list cont
+                    .home-notifs-list-cont {
+                        display: flex;
+                        justify-content: space-around;
+                        align-items: center;
+
+
+                        // home notif lists
+                        .home-notif-list {
+                            width: 28%;
+                        }
+
+                    }
+                }
+
+                // home weather & help main cont
+                .home-panels-small-cont {
+                    width: 100%;
+                    height: 9.75em;
+                    display: flex;
+                    justify-content: space-between;
+
+                    // home weather and help cont
+                    .home-weather-cont,
+                    .home-help-cont {
+                        width: 48%;
+                        height: 100%;
+                        padding: $panel-padding;
+                        margin-bottom: 5%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-around;
+
+                        @include white-panel-styling ($element-white, $panel-border-radius, $panel-padding);
+
+                        @include neumorphism-panel-styling (15px 15px 34px #c7c2bf, -15px -15px 34px #ffffff);
+
+                        .home-panel-icon-cont {
+                            width: 50%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-around;
+                        }
+
+                        .home-panel-text-cont {
+                            width: 50%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-around;
+
+                            #temp-fnt-size {
+                                font-size: 3em;
+                                color: $label-fnt-color;
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+
+        // home room manager section
+        .home-room-section {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 30%;
+
+            @include white-panel-styling ($element-white, $panel-border-radius, $panel-padding);
+
+            @include neumorphism-panel-styling (15px 15px 34px #c7c2bf, -15px -15px 34px #ffffff);
+
+            .home-room-main-cont {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                // home room buttons cont
+                .home-room-btn-cont {
+                    width: 100%;
+                    overflow-x: auto;
+                    margin: 3% 0;
+                    display: flex;
+                    justify-content: space-around;
+
+                    // small label btn size
+                    .small-btn {
+                        padding: 2% 5%;
+                        margin-left: 15px;
+
+                        @include neumorphism-orange-btn (linear-gradient(145deg, #ffa568, #e68b57), 6px -6px 12px #cc7b4e, -6px 6px 12px #ffb974);
+                    }
+
+                    .small-orange-btn {
+                        margin-left: 15px;
+                    }
+
+                }
+
+                // home room grid cont
+                .home-room-panel-cont {
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+
+                    // home room grid
+                    .home-room-panel-grid {
+                        width: 90%;
+                        height: auto;
+                        display: grid;
+                        justify-content: center;
+                        margin: 1.25em 1em;
+                        grid-template-columns: repeat(1, 80%);
+                        row-gap: 1.5625em;
+                        column-gap: 0.8125em;
+
+                        // home room grid item cont
+                        .home-room-panel-grid-item {
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-around;
+                            padding: $panel-padding;
+
+                            @include white-panel-styling ($element-white, $panel-border-radius, $panel-padding);
+
+                            @include neumorphism-panel-styling (15px 15px 34px #c7c2bf, -15px -15px 34px #ffffff);
+
+                            .home-room-device-info-cont,
+                            .home-room-device-btn-cont {
+                                height: 90%;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                justify-content: space-around;
+
+                            }
+
+                            .home-room-device-info-cont {
+                                width: 60%;
+
+                                .heater-1-link {
+                                    text-decoration: none;
+                                }
+
+                                .add-device {
+                                    text-align: center;
+                                }
+                            }
+
+                            .home-room-device-btn-cont {
+                                width: 40%;
+
+                                .blue-icon-btn {
+                                    width: 3.125em;
+                                    height: 3.125em;
+                                    font-size: 1.3em;
+                                    border-radius: 100%;
+                                    color: #e68b57;
+                                    box-shadow: 6px 6px 12px #7a8eba;
+
+                                    .fa-solid {
+                                        font-size: 2em;
+                                    }
+
+
+                                    // @include neumorphism-blue-btn (linear-gradient(145deg, #ffa568, #e68b57), 6px 6px 12px #7a8eba, 6px 6px 12px #b8d4ff);
+
+
+                                    // background-color: #99B1E9;
+                                    transition: background-color 0.2s ease;
+                                }
+                            }
+                        }
+                    }
+                }
+
+
+
+            }
+        }
+
+        // home room section ends
+        // home page styling ends
+
+
+        // heater details page styling
+        // heater details header
+        .main-header-icon-cont {
+            display: flex;
+            align-items: center;
+            width: 70%;
+
+            .back-button-link {
+                margin-right: 7%;
+
+                .fa-arrow-left {
+                    font-size: 3.125em;
+                }
+            }
+
+        }
+
+        // heater details section
+        // heater control section 
+        .heater-controls-section {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+
+            // heater controls main cont
+            .heater-controls-main-cont {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-around;
+                width: 33.875em;
+                padding: 3% 0;
+
+                @include white-panel-styling ($element-white, $panel-border-radius, $panel-padding);
+
+                @include neumorphism-panel-styling (15px 15px 34px #c7c2bf, -15px -15px 34px #ffffff);
+
+                // heater dial cont
+                .heater-dial-main-cont {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-around;
+
+                }
+
+                // heater dials
+                .heater-cold-dial-cont,
+                .heater-hot-dial-cont {
+                    width: 16em;
+                    height: 16em;
+                    // display: none;
+                }
+
+                // .heater-hot-dial-cont{
+
+                // }
+
+                // heater power main cont 
+                .heater-power-main-cont {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;
+
+                    .power-on-btn-img {
+                        width: 80px;
+                        height: 80px;
+                    }
+
+                }
+
+            }
+
+        }
+
+        // heater controls section ends
+
+        // heater activity section
+        .heater-activity-section {
+            width: 85%;
+            margin: 4% 0;
+            display: flex;
+            align-items: center;
+            padding: $panel-padding;
+
+            @include white-panel-styling ($element-white, $panel-border-radius, $panel-padding);
+
+            @include neumorphism-panel-styling (15px 15px 34px #c7c2bf, -15px -15px 34px #ffffff);
+
+            // heater activity icons cont
+            .heater-activity-icons-cont {
+                width: 40%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            // heater activity text cont
+            .heater-activity-text-cont {
+                width: 60%;
+                padding-left: 7%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+
+            }
+
+        }
+
+        // heater activity section ends
+
+        // heater energy suggestions section
+        .heater-energy-section {
+            margin-top: 2%;
+            padding-bottom: 25%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            // heater energy main grid
+            .heater-energy-main-grid {
+                display: grid;
+                height: auto;
+                grid-template-columns: repeat(1, 14.875em);
+                grid-template-rows: repeat(2, 14.4375em);
+                column-gap: 1.875em;
+                row-gap: 1.875em;
+
+                // heater energy grid item 
+                .heater-energy-panel-grid-item {
+                    padding: $panel-padding;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    @include white-panel-styling ($element-white, $panel-border-radius, $panel-padding);
+
+                    @include neumorphism-panel-styling (15px 15px 34px #c7c2bf, -15px -15px 34px #ffffff);
+
+                    .heater-energy-btn-cont {
+                        margin-top: 7%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+
+
+                        // small add button
+                        .small-orange-btn {
+                            padding: 3% 4%;
+                        }
+                    }
+
+                    // heater energy icon & text main cont
+                    .heater-energy-icon-text-main-cont {
+                        margin: 5% 0;
+                        display: flex;
+                        align-items: center;
+
+                        // heater energy text cont
+                        .heater-energy-text-cont {
+                            width: 60%;
+                        }
+
+                        // heater energy icon cont
+                        .heater-energy-icon-cont {
+                            width: 40%;
+                            display: flex;
+                            justify-content: center;
+
+                            .fa-leaf {
+                                font-size: 3.75em;
+                            }
+
+                        }
+                    }
+
+
+
+                }
+            }
+        }
+
+        // heater energy suggestions section ends
+
+        // heater details page styling ends
+
+        // smart features page styling
+
+        // smart panels section
+        .smart-panels-section {
+
+            .smart-voice-panel-cont {
+
+                .smart-voice-main-cont {
+                    padding: $panel-padding;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    @include white-panel-styling ($header-fnt-color, $panel-border-radius, $panel-padding);
+
+                    @include neumorphism-panel-styling (15px 15px 34px #c7c2bf, -15px -15px 34px #ffffff);
+
+                    .subheader-voice {
+                        width: 100%;
+                        padding-left: 5%;
+                    }
+
+                    .smart-voice-body-cont {
+                        width: 100%;
+                        padding: 2%;
+                        display: flex;
+                        align-items: center;
+
+                        .smart-voice-icon-cont,
+                        .smart-voice-text-cont1,
+                        .smart-voice-text-cont2,
+                        .smart-voice-btn-cont {
+                            display: flex;
+                            align-items: center;
+
+                            .small-orange-btn {
+                                width: 50px;
+                                height: 50px;
+
+
+                            }
+                        }
+
+                        .smart-voice-icon-cont {
+                            width: 15%;
+                            justify-content: flex-start;
+                        }
+
+                        .smart-voice-text-cont1,
+                        .smart-voice-text-cont2,
+                        .smart-voice-btn-cont {
+                            justify-content: center;
+                        }
+
+                        .smart-voice-text-cont1 {
+                            width: 40%;
+                        }
+
+                        .smart-voice-text-cont2 {
+                            width: 45%;
+                        }
+
+                        .smart-voice-btn-cont {
+                            width: 20%;
+                        }
+
+                    }
+
+
+                }
+            }
+        }
+
+        // smart panels section ends
+
+        // smart energy section
+        .smart-energy-section {
+            margin-bottom: 3%;
+            @include white-panel-styling ($header-fnt-color, $panel-border-radius, $panel-padding);
+
+            @include neumorphism-panel-styling (15px 15px 34px #c7c2bf, -15px -15px 34px #ffffff);
+
+            // smart enrgy main cont
+            .smart-energy-main-cont {
+                width: 100%;
+                padding: $panel-padding;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+
+                // smart energy main subheader
+                .subheader-voice {
+                    padding-left: 5%;
+                    width: 100%;
+                }
+
+                // smart energy body content cont
+                .smart-energy-body-cont {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+
+                    .smart-energy-body-icons-cont,
+                    .smart-energy-text-cont {
+                        display: flex;
+                        justify-content: space-around;
+                        // align-items: center;
+                    }
+
+                    // smart energy icons cont
+                    .smart-energy-body-icons-cont {
+                        width: 50%;
+
+                        // smart energy icons
+                        .panel-energy-icon {
+                            font-size: 5em;
+                        }
+                    }
+
+                    // smart energy text cont
+                    .smart-energy-text-cont {
+                        width: 50%;
+                        flex-direction: column;
+                        padding-left: 10%;
+
+                        .orange-label-btn {
+                            margin-top: 8%;
+                            padding: 2%;
+                            width: 70%;
+                        }
+                    }
+
+                }
+
+            }
+        }
+
+        // smart  panels section ends
+
+        // dialog styling
+        .dialog-main-cont {
+            padding: 5%;
+
+            position: fixed;
+            z-index: 20;
+            top: 40%;
+            left: 25%;
+
+
+            background-color: $element-white;
+            box-shadow: 15px 15px 34px #c7c2bf;
+            border-radius: $panel-border-radius;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+
+
+            #energy-usage-header-large {
+                margin-bottom: 4%;
+            }
+
+            .orange-label-btn {
+                width: 40%;
+            }
+        }
+
+        // dialog styling ends
+
+
+
+        // smart features page styling ends
+
+    }
+
+}
+
+// TABLET BREAKPOINT - 834px x 1194px
+@media screen and (min-width:834px) {
+
+    body {
+
+        .main-header-section {
+            padding-left: 7%;
+        }
+
+        // home page
+        // home room section
+        .home-room-section {
+            margin-top: 3%;
+            margin-bottom: 26%;
+
+            .home-room-main-cont {
+
+                .home-room-panel-cont {
+
+                    // home room grid
+                    .home-room-panel-grid {
+                        display: grid;
+                        justify-content: center;
+                        grid-template-columns: repeat(2, 15.1em);
+                        grid-template-rows: repeat(2, 20.30em);
+                        row-gap: 0.9375em;
+                        column-gap: 3.125em;
+
+                        // home-room-panel-grid-item
+                        .home-room-panel-grid-item {
+                            flex-direction: column;
+                            padding: 6% 3%;
+
+                            .home-room-device-info-cont {
+                                .main-subheader {
+
+                                    .small-subheader {
+                                        font-size: 1.4em;
+                                        font-family: $header-font-family;
+                                    }
+                                }
+                            }
+
+                            .room-panel-icon {
+                                font-size: 5.625em;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // heater details section
+        .heater-activity-section {
+            width: 65%;
+            margin-bottom: 2%;
+        }
+
+        .heater-energy-section {
+            margin-top: 2%;
+            padding-bottom: 20%;
+
+            .heater-energy-main-grid {
+                grid-template-columns: repeat(2, 14.875em);
+                grid-template-rows: repeat(1, 14.4375em);
+                column-gap: 1.875em;
+                row-gap: 1.875em;
+            }
+        }
+
+    }
+
+
+}
+
+
+// SMART TV BREAKPOINT - 1280px X 720px
+@media screen and (min-width:1280px) {
+    body {
+
+        // navbar
+        .navbar {
+            position: absolute;
+            height: 100vh;
+            width: 132px;
+            position: fixed;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        // section
+        section {
+            width: 80%;
+            margin-left: 15%;
+        }
+
+        // home page
+        // home panels section
+        .home-panels-section {
+            margin-bottom: 0;
+
+            .home-panels-cont {
+                flex-direction: row;
+
+                // home notifications panel
+                .home-notifs-cont {
+                    width: 25%;
+                    padding: 2% 1% 3% 1%;
+                    margin-bottom: 2%;
+                    margin-top: 1.5%;
+                    margin-right: 3%;
+
+                    .home-notifs-list-cont {
+                        flex-direction: column;
+                        // align-items: flex-start;
+
+                        .fa-bell {
+                            display: none;
+                        }
+
+                        .home-notif-list {
+                            width: 100%;
+                            padding-left: 5%;
+                            margin-top: 2%;
+                        }
+                    }
+
+                }
+
+                .home-panels-small-cont {
+                    width: 66%;
+                    height: 12.3125em;
+                }
+            }
+        }
+
+        // home room section
+        .home-room-section {
+            width: 64em;
+            margin-left: 15%;
+            margin-bottom: 4%;
+
+            .home-room-main-cont {
+                width: 100%;
+
+                .home-room-panel-cont {
+
+                    // home room grid
+                    .home-room-panel-grid {
+                        display: grid;
+                        justify-content: center;
+                        grid-template-columns: repeat(3, 14.875em);
+                        grid-template-rows: repeat(1, 20.4375em);
+                        row-gap: 0;
+                        column-gap: 3.25em;
+
+                        // home-room-panel-grid-item
+                        .home-room-panel-grid-item {
+
+                            .home-room-device-info-cont {
+                                .main-subheader {
+                                    .small-subheader {
+                                        font-size: 1.3em;
+                                    }
+                                }
+                            }
+
+                            .room-panel-icon {
+                                font-size: 5.625em;
+                            }
+                        }
+                    }
+                }
+
+
+            }
+        }
+
+        // heater details section
+        .heater-activity-section {
+            width: 42%;
+            margin-left: 14%;
+            margin-bottom: 2%;
+            margin-top: 4%;
+        }
+
+        // heater energy section 
+        .heater-energy-section {
+            margin-top: 2%;
+            margin-bottom: 2%;
+            padding-bottom: 3%;
+        }
+
+    }
+}
+
+// button states
+
+.home-room-section {
+    .home-room-main-cont {
+
+        // blue power button active
+        .home-room-panel-cont {
+            .blue-icon-btn:active {
+                transition: background-color 0.2s ease;
+                background-color: $body-fnt-color;
+            }
+
+        }
+
+        // orange power button active
+        .home-room-btn-cont {
+            .orange-label-btn:active {
+                transition: background-color 0.2s ease;
+                background-color: $light-blue-color;
+
+            }
+        }
+    }
+}

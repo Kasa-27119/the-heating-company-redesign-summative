@@ -1,0 +1,1103 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+}
+
+body {
+  height: 100%;
+  background-attachment: fixed;
+  background: rgb(205, 216, 243);
+  background: linear-gradient(0deg, rgb(205, 216, 243) 0%, rgb(255, 241, 233) 50%, rgb(249, 243, 239) 100%);
+}
+body .body-text {
+  color: #5277CE;
+  font-size: 1.125em;
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 500;
+}
+body .main-header {
+  font-size: 2.875em;
+  color: #FF7144;
+  font-family: "Karla", sans-serif;
+  font-weight: 800;
+}
+body .subheader {
+  font-size: 1.75em;
+  font-family: "Karla", sans-serif;
+  font-weight: 700;
+}
+body .small-subheader {
+  color: #0D121C;
+  font-size: 1.3em;
+  font-family: "Karla", sans-serif;
+  font-weight: 700;
+}
+body li {
+  list-style: none;
+}
+body .fa-solid,
+body .subheader {
+  color: #0D121C;
+}
+body .white-icon {
+  color: #0D121C;
+}
+body .panel-icon {
+  font-size: 4em;
+}
+body .room-panel-icon {
+  font-size: 4.8em;
+}
+body .orange-label-btn {
+  color: #F9F3EF;
+  font-family: "Karla", sans-serif;
+  font-size: 1.5em;
+  font-weight: 700;
+  background-color: #FF9A61;
+  border-radius: 1.875em;
+  background: linear-gradient(145deg, #ffa568, #e68b57);
+  box-shadow: 6px 6px 12px #cc7b4e;
+  box-shadow: 6px 6px 12px #ffb974;
+}
+body .small-orange-btn {
+  color: #F9F3EF;
+  font-size: 1.3em;
+  background-color: #FF9A61;
+  border-radius: 100%;
+  padding: 2.6% 3%;
+  background: linear-gradient(145deg, #ffa568, #e68b57);
+  box-shadow: 6px 6px 12px #cc7b4e;
+  box-shadow: 6px 6px 12px #ffb974;
+}
+
+@media screen and (max-width: 640px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-attachment: fixed;
+  }
+  body section {
+    width: 85%;
+  }
+  body .navbar {
+    height: 7.5em;
+    width: 100%;
+    background-color: #F9F3EF;
+    position: fixed;
+    bottom: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 15px 15px 34px #c7c2bf;
+    box-shadow: -15px -15px 34px #ffffff;
+  }
+  body .navbar .navbar-link {
+    width: 5em;
+    height: 5em;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  body .navbar .navbar-link .navbar-icon {
+    font-size: 3.75em;
+  }
+  body .main-header-section {
+    margin: 5% 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  body .main-header-section .heating-company-logo {
+    width: 5em;
+    height: 5em;
+  }
+  body .home-panels-section {
+    margin-bottom: 3%;
+  }
+  body .home-panels-section .home-panels-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  body .home-panels-section .home-panels-cont .home-notifs-cont {
+    margin-bottom: 3%;
+    width: 100%;
+    padding: 3%;
+    background-color: #F9F3EF;
+    border-radius: 1.875em;
+    box-shadow: 15px 15px 34px #c7c2bf;
+    box-shadow: -15px -15px 34px #ffffff;
+  }
+  body .home-panels-section .home-panels-cont .home-notifs-cont .subheader-voice {
+    width: 100%;
+    padding-left: 5%;
+  }
+  body .home-panels-section .home-panels-cont .home-notifs-cont .home-notifs-list-cont {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  body .home-panels-section .home-panels-cont .home-notifs-cont .home-notifs-list-cont .home-notif-list {
+    width: 28%;
+  }
+  body .home-panels-section .home-panels-cont .home-panels-small-cont {
+    width: 100%;
+    height: 9.75em;
+    display: flex;
+    justify-content: space-between;
+  }
+  body .home-panels-section .home-panels-cont .home-panels-small-cont .home-weather-cont,
+  body .home-panels-section .home-panels-cont .home-panels-small-cont .home-help-cont {
+    width: 48%;
+    height: 100%;
+    padding: 3%;
+    margin-bottom: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #F9F3EF;
+    border-radius: 1.875em;
+    box-shadow: 15px 15px 34px #c7c2bf;
+    box-shadow: -15px -15px 34px #ffffff;
+  }
+  body .home-panels-section .home-panels-cont .home-panels-small-cont .home-weather-cont .home-panel-icon-cont,
+  body .home-panels-section .home-panels-cont .home-panels-small-cont .home-help-cont .home-panel-icon-cont {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  body .home-panels-section .home-panels-cont .home-panels-small-cont .home-weather-cont .home-panel-text-cont,
+  body .home-panels-section .home-panels-cont .home-panels-small-cont .home-help-cont .home-panel-text-cont {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  body .home-panels-section .home-panels-cont .home-panels-small-cont .home-weather-cont .home-panel-text-cont #temp-fnt-size,
+  body .home-panels-section .home-panels-cont .home-panels-small-cont .home-help-cont .home-panel-text-cont #temp-fnt-size {
+    font-size: 3em;
+    color: #0D121C;
+  }
+  body .home-room-section {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30%;
+    background-color: #F9F3EF;
+    border-radius: 1.875em;
+    box-shadow: 15px 15px 34px #c7c2bf;
+    box-shadow: -15px -15px 34px #ffffff;
+  }
+  body .home-room-section .home-room-main-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  body .home-room-section .home-room-main-cont .home-room-btn-cont {
+    width: 100%;
+    overflow-x: auto;
+    margin: 3% 0;
+    display: flex;
+    justify-content: space-around;
+  }
+  body .home-room-section .home-room-main-cont .home-room-btn-cont .small-btn {
+    padding: 2% 5%;
+    margin-left: 15px;
+    background: linear-gradient(145deg, #ffa568, #e68b57);
+    box-shadow: 6px 6px 12px #cc7b4e;
+    box-shadow: 6px 6px 12px #ffb974;
+  }
+  body .home-room-section .home-room-main-cont .home-room-btn-cont .small-orange-btn {
+    margin-left: 15px;
+  }
+  body .home-room-section .home-room-main-cont .home-room-panel-cont {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  body .home-room-section .home-room-main-cont .home-room-panel-cont .home-room-panel-grid {
+    width: 90%;
+    height: auto;
+    display: grid;
+    justify-content: center;
+    margin: 1.25em 1em;
+    grid-template-columns: repeat(1, 80%);
+    row-gap: 1.5625em;
+    -moz-column-gap: 0.8125em;
+         column-gap: 0.8125em;
+  }
+  body .home-room-section .home-room-main-cont .home-room-panel-cont .home-room-panel-grid .home-room-panel-grid-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 3%;
+    background-color: #F9F3EF;
+    border-radius: 1.875em;
+    box-shadow: 15px 15px 34px #c7c2bf;
+    box-shadow: -15px -15px 34px #ffffff;
+  }
+  body .home-room-section .home-room-main-cont .home-room-panel-cont .home-room-panel-grid .home-room-panel-grid-item .home-room-device-info-cont,
+  body .home-room-section .home-room-main-cont .home-room-panel-cont .home-room-panel-grid .home-room-panel-grid-item .home-room-device-btn-cont {
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+  body .home-room-section .home-room-main-cont .home-room-panel-cont .home-room-panel-grid .home-room-panel-grid-item .home-room-device-info-cont {
+    width: 60%;
+  }
+  body .home-room-section .home-room-main-cont .home-room-panel-cont .home-room-panel-grid .home-room-panel-grid-item .home-room-device-info-cont .heater-1-link {
+    text-decoration: none;
+  }
+  body .home-room-section .home-room-main-cont .home-room-panel-cont .home-room-panel-grid .home-room-panel-grid-item .home-room-device-info-cont .add-device {
+    text-align: center;
+  }
+  body .home-room-section .home-room-main-cont .home-room-panel-cont .home-room-panel-grid .home-room-panel-grid-item .home-room-device-btn-cont {
+    width: 40%;
+  }
+  body .home-room-section .home-room-main-cont .home-room-panel-cont .home-room-panel-grid .home-room-panel-grid-item .home-room-device-btn-cont .blue-icon-btn {
+    width: 3.125em;
+    height: 3.125em;
+    font-size: 1.3em;
+    border-radius: 100%;
+    color: #e68b57;
+    box-shadow: 6px 6px 12px #7a8eba;
+    transition: background-color 0.2s ease;
+  }
+  body .home-room-section .home-room-main-cont .home-room-panel-cont .home-room-panel-grid .home-room-panel-grid-item .home-room-device-btn-cont .blue-icon-btn .fa-solid {
+    font-size: 2em;
+  }
+  body .main-header-icon-cont {
+    display: flex;
+    align-items: center;
+    width: 70%;
+  }
+  body .main-header-icon-cont .back-button-link {
+    margin-right: 7%;
+  }
+  body .main-header-icon-cont .back-button-link .fa-arrow-left {
+    font-size: 3.125em;
+  }
+  body .heater-controls-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  body .heater-controls-section .heater-controls-main-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 33.875em;
+    padding: 3% 0;
+    background-color: #F9F3EF;
+    border-radius: 1.875em;
+    box-shadow: 15px 15px 34px #c7c2bf;
+    box-shadow: -15px -15px 34px #ffffff;
+  }
+  body .heater-controls-section .heater-controls-main-cont .heater-dial-main-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+  body .heater-controls-section .heater-controls-main-cont .heater-cold-dial-cont,
+  body .heater-controls-section .heater-controls-main-cont .heater-hot-dial-cont {
+    width: 16em;
+    height: 16em;
+  }
+  body .heater-controls-section .heater-controls-main-cont .heater-power-main-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  body .heater-controls-section .heater-controls-main-cont .heater-power-main-cont .power-on-btn-img {
+    width: 80px;
+    height: 80px;
+  }
+  body .heater-activity-section {
+    width: 85%;
+    margin: 4% 0;
+    display: flex;
+    align-items: center;
+    padding: 3%;
+    background-color: #F9F3EF;
+    border-radius: 1.875em;
+    box-shadow: 15px 15px 34px #c7c2bf;
+    box-shadow: -15px -15px 34px #ffffff;
+  }
+  body .heater-activity-section .heater-activity-icons-cont {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  body .heater-activity-section .heater-activity-text-cont {
+    width: 60%;
+    padding-left: 7%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  body .heater-energy-section {
+    margin-top: 2%;
+    padding-bottom: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  body .heater-energy-section .heater-energy-main-grid {
+    display: grid;
+    height: auto;
+    grid-template-columns: repeat(1, 14.875em);
+    grid-template-rows: repeat(2, 14.4375em);
+    -moz-column-gap: 1.875em;
+         column-gap: 1.875em;
+    row-gap: 1.875em;
+  }
+  body .heater-energy-section .heater-energy-main-grid .heater-energy-panel-grid-item {
+    padding: 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #F9F3EF;
+    border-radius: 1.875em;
+    box-shadow: 15px 15px 34px #c7c2bf;
+    box-shadow: -15px -15px 34px #ffffff;
+  }
+  body .heater-energy-section .heater-energy-main-grid .heater-energy-panel-grid-item .heater-energy-btn-cont {
+    margin-top: 7%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  body .heater-energy-section .heater-energy-main-grid .heater-energy-panel-grid-item .heater-energy-btn-cont .small-orange-btn {
+    padding: 3% 4%;
+  }
+  body .heater-energy-section .heater-energy-main-grid .heater-energy-panel-grid-item .heater-energy-icon-text-main-cont {
+    margin: 5% 0;
+    display: flex;
+    align-items: center;
+  }
+  body .heater-energy-section .heater-energy-main-grid .heater-energy-panel-grid-item .heater-energy-icon-text-main-cont .heater-energy-text-cont {
+    width: 60%;
+  }
+  body .heater-energy-section .heater-energy-main-grid .heater-energy-panel-grid-item .heater-energy-icon-text-main-cont .heater-energy-icon-cont {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+  }
+  body .heater-energy-section .heater-energy-main-grid .heater-energy-panel-grid-item .heater-energy-icon-text-main-cont .heater-energy-icon-cont .fa-leaf {
+    font-size: 3.75em;
+  }
+  body .smart-panels-section .smart-voice-panel-cont .smart-voice-main-cont {
+    padding: 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #F9F3EF;
+    border-radius: 1.875em;
+    box-shadow: 15px 15px 34px #c7c2bf;
+    box-shadow: -15px -15px 34px #ffffff;
+  }
+  body .smart-panels-section .smart-voice-panel-cont .smart-voice-main-cont .subheader-voice {
+    width: 100%;
+    padding-left: 5%;
+  }
+  body .smart-panels-section .smart-voice-panel-cont .smart-voice-main-cont .smart-voice-body-cont {
+    width: 100%;
+    padding: 2%;
+    display: flex;
+    align-items: center;
+  }
+  body .smart-panels-section .smart-voice-panel-cont .smart-voice-main-cont .smart-voice-body-cont .smart-voice-icon-cont,
+  body .smart-panels-section .smart-voice-panel-cont .smart-voice-main-cont .smart-voice-body-cont .smart-voice-text-cont1,
+  body .smart-panels-section .smart-voice-panel-cont .smart-voice-main-cont .smart-voice-body-cont .smart-voice-text-cont2,
+  body .smart-panels-section .smart-voice-panel-cont .smart-voice-main-cont .smart-voice-body-cont .smart-voice-btn-cont {
+    display: flex;
+    align-items: center;
+  }
+  body .smart-panels-section .smart-voice-panel-cont .smart-voice-main-cont .smart-voice-body-cont .smart-voice-icon-cont .small-orange-btn,
+  body .smart-panels-section .smart-voice-panel-cont .smart-voice-main-cont .smart-voice-body-cont .smart-voice-text-cont1 .small-orange-btn,
+  body .smart-panels-section .smart-voice-panel-cont .smart-voice-main-cont .smart-voice-body-cont .smart-voice-text-cont2 .small-orange-btn,
+  body .smart-panels-section .smart-voice-panel-cont .smart-voice-main-cont .smart-voice-body-cont .smart-voice-btn-cont .small-orange-btn {
+    width: 50px;
+    height: 50px;
+  }
+  body .smart-panels-section .smart-voice-panel-cont .smart-voice-main-cont .smart-voice-body-cont .smart-voice-icon-cont {
+    width: 15%;
+    justify-content: flex-start;
+  }
+  body .smart-panels-section .smart-voice-panel-cont .smart-voice-main-cont .smart-voice-body-cont .smart-voice-text-cont1,
+  body .smart-panels-section .smart-voice-panel-cont .smart-voice-main-cont .smart-voice-body-cont .smart-voice-text-cont2,
+  body .smart-panels-section .smart-voice-panel-cont .smart-voice-main-cont .smart-voice-body-cont .smart-voice-btn-cont {
+    justify-content: center;
+  }
+  body .smart-panels-section .smart-voice-panel-cont .smart-voice-main-cont .smart-voice-body-cont .smart-voice-text-cont1 {
+    width: 40%;
+  }
+  body .smart-panels-section .smart-voice-panel-cont .smart-voice-main-cont .smart-voice-body-cont .smart-voice-text-cont2 {
+    width: 45%;
+  }
+  body .smart-panels-section .smart-voice-panel-cont .smart-voice-main-cont .smart-voice-body-cont .smart-voice-btn-cont {
+    width: 20%;
+  }
+  body .smart-energy-section {
+    margin-bottom: 3%;
+    background-color: #F9F3EF;
+    border-radius: 1.875em;
+    box-shadow: 15px 15px 34px #c7c2bf;
+    box-shadow: -15px -15px 34px #ffffff;
+  }
+  body .smart-energy-section .smart-energy-main-cont {
+    width: 100%;
+    padding: 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  body .smart-energy-section .smart-energy-main-cont .subheader-voice {
+    padding-left: 5%;
+    width: 100%;
+  }
+  body .smart-energy-section .smart-energy-main-cont .smart-energy-body-cont {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  body .smart-energy-section .smart-energy-main-cont .smart-energy-body-cont .smart-energy-body-icons-cont,
+  body .smart-energy-section .smart-energy-main-cont .smart-energy-body-cont .smart-energy-text-cont {
+    display: flex;
+    justify-content: space-around;
+  }
+  body .smart-energy-section .smart-energy-main-cont .smart-energy-body-cont .smart-energy-body-icons-cont {
+    width: 50%;
+  }
+  body .smart-energy-section .smart-energy-main-cont .smart-energy-body-cont .smart-energy-body-icons-cont .panel-energy-icon {
+    font-size: 5em;
+  }
+  body .smart-energy-section .smart-energy-main-cont .smart-energy-body-cont .smart-energy-text-cont {
+    width: 50%;
+    flex-direction: column;
+    padding-left: 10%;
+  }
+  body .smart-energy-section .smart-energy-main-cont .smart-energy-body-cont .smart-energy-text-cont .orange-label-btn {
+    margin-top: 8%;
+    padding: 2%;
+    width: 70%;
+  }
+  body .dialog-main-cont {
+    padding: 5%;
+    position: fixed;
+    z-index: 20;
+    top: 40%;
+    left: 25%;
+    background-color: #F9F3EF;
+    box-shadow: 15px 15px 34px #c7c2bf;
+    border-radius: 1.875em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  body .dialog-main-cont #energy-usage-header-large {
+    margin-bottom: 4%;
+  }
+  body .dialog-main-cont .orange-label-btn {
+    width: 40%;
+  }
+}
+@media screen and (min-width: 640px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-attachment: fixed;
+  }
+  body section {
+    width: 85%;
+  }
+  body .navbar {
+    height: 7.5em;
+    width: 100%;
+    background-color: #F9F3EF;
+    position: fixed;
+    bottom: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 15px 15px 34px #c7c2bf;
+    box-shadow: -15px -15px 34px #ffffff;
+  }
+  body .navbar .navbar-link {
+    width: 5em;
+    height: 5em;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  body .navbar .navbar-link .navbar-icon {
+    font-size: 3.75em;
+  }
+  body .main-header-section {
+    margin: 5% 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  body .main-header-section .heating-company-logo {
+    width: 5em;
+    height: 5em;
+  }
+  body .home-panels-section {
+    margin-bottom: 3%;
+  }
+  body .home-panels-section .home-panels-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  body .home-panels-section .home-panels-cont .home-notifs-cont {
+    margin-bottom: 3%;
+    width: 100%;
+    padding: 3%;
+    background-color: #F9F3EF;
+    border-radius: 1.875em;
+    box-shadow: 15px 15px 34px #c7c2bf;
+    box-shadow: -15px -15px 34px #ffffff;
+  }
+  body .home-panels-section .home-panels-cont .home-notifs-cont .subheader-voice {
+    width: 100%;
+    padding-left: 5%;
+  }
+  body .home-panels-section .home-panels-cont .home-notifs-cont .home-notifs-list-cont {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  body .home-panels-section .home-panels-cont .home-notifs-cont .home-notifs-list-cont .home-notif-list {
+    width: 28%;
+  }
+  body .home-panels-section .home-panels-cont .home-panels-small-cont {
+    width: 100%;
+    height: 9.75em;
+    display: flex;
+    justify-content: space-between;
+  }
+  body .home-panels-section .home-panels-cont .home-panels-small-cont .home-weather-cont,
+  body .home-panels-section .home-panels-cont .home-panels-small-cont .home-help-cont {
+    width: 48%;
+    height: 100%;
+    padding: 3%;
+    margin-bottom: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #F9F3EF;
+    border-radius: 1.875em;
+    box-shadow: 15px 15px 34px #c7c2bf;
+    box-shadow: -15px -15px 34px #ffffff;
+  }
+  body .home-panels-section .home-panels-cont .home-panels-small-cont .home-weather-cont .home-panel-icon-cont,
+  body .home-panels-section .home-panels-cont .home-panels-small-cont .home-help-cont .home-panel-icon-cont {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  body .home-panels-section .home-panels-cont .home-panels-small-cont .home-weather-cont .home-panel-text-cont,
+  body .home-panels-section .home-panels-cont .home-panels-small-cont .home-help-cont .home-panel-text-cont {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  body .home-panels-section .home-panels-cont .home-panels-small-cont .home-weather-cont .home-panel-text-cont #temp-fnt-size,
+  body .home-panels-section .home-panels-cont .home-panels-small-cont .home-help-cont .home-panel-text-cont #temp-fnt-size {
+    font-size: 3em;
+    color: #0D121C;
+  }
+  body .home-room-section {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30%;
+    background-color: #F9F3EF;
+    border-radius: 1.875em;
+    box-shadow: 15px 15px 34px #c7c2bf;
+    box-shadow: -15px -15px 34px #ffffff;
+  }
+  body .home-room-section .home-room-main-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  body .home-room-section .home-room-main-cont .home-room-btn-cont {
+    width: 100%;
+    overflow-x: auto;
+    margin: 3% 0;
+    display: flex;
+    justify-content: space-around;
+  }
+  body .home-room-section .home-room-main-cont .home-room-btn-cont .small-btn {
+    padding: 2% 5%;
+    margin-left: 15px;
+    background: linear-gradient(145deg, #ffa568, #e68b57);
+    box-shadow: 6px 6px 12px #cc7b4e;
+    box-shadow: 6px 6px 12px #ffb974;
+  }
+  body .home-room-section .home-room-main-cont .home-room-btn-cont .small-orange-btn {
+    margin-left: 15px;
+  }
+  body .home-room-section .home-room-main-cont .home-room-panel-cont {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  body .home-room-section .home-room-main-cont .home-room-panel-cont .home-room-panel-grid {
+    width: 90%;
+    height: auto;
+    display: grid;
+    justify-content: center;
+    margin: 1.25em 1em;
+    grid-template-columns: repeat(1, 80%);
+    row-gap: 1.5625em;
+    -moz-column-gap: 0.8125em;
+         column-gap: 0.8125em;
+  }
+  body .home-room-section .home-room-main-cont .home-room-panel-cont .home-room-panel-grid .home-room-panel-grid-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 3%;
+    background-color: #F9F3EF;
+    border-radius: 1.875em;
+    box-shadow: 15px 15px 34px #c7c2bf;
+    box-shadow: -15px -15px 34px #ffffff;
+  }
+  body .home-room-section .home-room-main-cont .home-room-panel-cont .home-room-panel-grid .home-room-panel-grid-item .home-room-device-info-cont,
+  body .home-room-section .home-room-main-cont .home-room-panel-cont .home-room-panel-grid .home-room-panel-grid-item .home-room-device-btn-cont {
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+  body .home-room-section .home-room-main-cont .home-room-panel-cont .home-room-panel-grid .home-room-panel-grid-item .home-room-device-info-cont {
+    width: 60%;
+  }
+  body .home-room-section .home-room-main-cont .home-room-panel-cont .home-room-panel-grid .home-room-panel-grid-item .home-room-device-info-cont .heater-1-link {
+    text-decoration: none;
+  }
+  body .home-room-section .home-room-main-cont .home-room-panel-cont .home-room-panel-grid .home-room-panel-grid-item .home-room-device-info-cont .add-device {
+    text-align: center;
+  }
+  body .home-room-section .home-room-main-cont .home-room-panel-cont .home-room-panel-grid .home-room-panel-grid-item .home-room-device-btn-cont {
+    width: 40%;
+  }
+  body .home-room-section .home-room-main-cont .home-room-panel-cont .home-room-panel-grid .home-room-panel-grid-item .home-room-device-btn-cont .blue-icon-btn {
+    width: 3.125em;
+    height: 3.125em;
+    font-size: 1.3em;
+    border-radius: 100%;
+    color: #e68b57;
+    box-shadow: 6px 6px 12px #7a8eba;
+    transition: background-color 0.2s ease;
+  }
+  body .home-room-section .home-room-main-cont .home-room-panel-cont .home-room-panel-grid .home-room-panel-grid-item .home-room-device-btn-cont .blue-icon-btn .fa-solid {
+    font-size: 2em;
+  }
+  body .main-header-icon-cont {
+    display: flex;
+    align-items: center;
+    width: 70%;
+  }
+  body .main-header-icon-cont .back-button-link {
+    margin-right: 7%;
+  }
+  body .main-header-icon-cont .back-button-link .fa-arrow-left {
+    font-size: 3.125em;
+  }
+  body .heater-controls-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  body .heater-controls-section .heater-controls-main-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 33.875em;
+    padding: 3% 0;
+    background-color: #F9F3EF;
+    border-radius: 1.875em;
+    box-shadow: 15px 15px 34px #c7c2bf;
+    box-shadow: -15px -15px 34px #ffffff;
+  }
+  body .heater-controls-section .heater-controls-main-cont .heater-dial-main-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+  body .heater-controls-section .heater-controls-main-cont .heater-cold-dial-cont,
+  body .heater-controls-section .heater-controls-main-cont .heater-hot-dial-cont {
+    width: 16em;
+    height: 16em;
+  }
+  body .heater-controls-section .heater-controls-main-cont .heater-power-main-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  body .heater-controls-section .heater-controls-main-cont .heater-power-main-cont .power-on-btn-img {
+    width: 80px;
+    height: 80px;
+  }
+  body .heater-activity-section {
+    width: 85%;
+    margin: 4% 0;
+    display: flex;
+    align-items: center;
+    padding: 3%;
+    background-color: #F9F3EF;
+    border-radius: 1.875em;
+    box-shadow: 15px 15px 34px #c7c2bf;
+    box-shadow: -15px -15px 34px #ffffff;
+  }
+  body .heater-activity-section .heater-activity-icons-cont {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  body .heater-activity-section .heater-activity-text-cont {
+    width: 60%;
+    padding-left: 7%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  body .heater-energy-section {
+    margin-top: 2%;
+    padding-bottom: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  body .heater-energy-section .heater-energy-main-grid {
+    display: grid;
+    height: auto;
+    grid-template-columns: repeat(1, 14.875em);
+    grid-template-rows: repeat(2, 14.4375em);
+    -moz-column-gap: 1.875em;
+         column-gap: 1.875em;
+    row-gap: 1.875em;
+  }
+  body .heater-energy-section .heater-energy-main-grid .heater-energy-panel-grid-item {
+    padding: 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #F9F3EF;
+    border-radius: 1.875em;
+    box-shadow: 15px 15px 34px #c7c2bf;
+    box-shadow: -15px -15px 34px #ffffff;
+  }
+  body .heater-energy-section .heater-energy-main-grid .heater-energy-panel-grid-item .heater-energy-btn-cont {
+    margin-top: 7%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  body .heater-energy-section .heater-energy-main-grid .heater-energy-panel-grid-item .heater-energy-btn-cont .small-orange-btn {
+    padding: 3% 4%;
+  }
+  body .heater-energy-section .heater-energy-main-grid .heater-energy-panel-grid-item .heater-energy-icon-text-main-cont {
+    margin: 5% 0;
+    display: flex;
+    align-items: center;
+  }
+  body .heater-energy-section .heater-energy-main-grid .heater-energy-panel-grid-item .heater-energy-icon-text-main-cont .heater-energy-text-cont {
+    width: 60%;
+  }
+  body .heater-energy-section .heater-energy-main-grid .heater-energy-panel-grid-item .heater-energy-icon-text-main-cont .heater-energy-icon-cont {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+  }
+  body .heater-energy-section .heater-energy-main-grid .heater-energy-panel-grid-item .heater-energy-icon-text-main-cont .heater-energy-icon-cont .fa-leaf {
+    font-size: 3.75em;
+  }
+  body .smart-panels-section .smart-voice-panel-cont .smart-voice-main-cont {
+    padding: 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #F9F3EF;
+    border-radius: 1.875em;
+    box-shadow: 15px 15px 34px #c7c2bf;
+    box-shadow: -15px -15px 34px #ffffff;
+  }
+  body .smart-panels-section .smart-voice-panel-cont .smart-voice-main-cont .subheader-voice {
+    width: 100%;
+    padding-left: 5%;
+  }
+  body .smart-panels-section .smart-voice-panel-cont .smart-voice-main-cont .smart-voice-body-cont {
+    width: 100%;
+    padding: 2%;
+    display: flex;
+    align-items: center;
+  }
+  body .smart-panels-section .smart-voice-panel-cont .smart-voice-main-cont .smart-voice-body-cont .smart-voice-icon-cont,
+  body .smart-panels-section .smart-voice-panel-cont .smart-voice-main-cont .smart-voice-body-cont .smart-voice-text-cont1,
+  body .smart-panels-section .smart-voice-panel-cont .smart-voice-main-cont .smart-voice-body-cont .smart-voice-text-cont2,
+  body .smart-panels-section .smart-voice-panel-cont .smart-voice-main-cont .smart-voice-body-cont .smart-voice-btn-cont {
+    display: flex;
+    align-items: center;
+  }
+  body .smart-panels-section .smart-voice-panel-cont .smart-voice-main-cont .smart-voice-body-cont .smart-voice-icon-cont .small-orange-btn,
+  body .smart-panels-section .smart-voice-panel-cont .smart-voice-main-cont .smart-voice-body-cont .smart-voice-text-cont1 .small-orange-btn,
+  body .smart-panels-section .smart-voice-panel-cont .smart-voice-main-cont .smart-voice-body-cont .smart-voice-text-cont2 .small-orange-btn,
+  body .smart-panels-section .smart-voice-panel-cont .smart-voice-main-cont .smart-voice-body-cont .smart-voice-btn-cont .small-orange-btn {
+    width: 50px;
+    height: 50px;
+  }
+  body .smart-panels-section .smart-voice-panel-cont .smart-voice-main-cont .smart-voice-body-cont .smart-voice-icon-cont {
+    width: 15%;
+    justify-content: flex-start;
+  }
+  body .smart-panels-section .smart-voice-panel-cont .smart-voice-main-cont .smart-voice-body-cont .smart-voice-text-cont1,
+  body .smart-panels-section .smart-voice-panel-cont .smart-voice-main-cont .smart-voice-body-cont .smart-voice-text-cont2,
+  body .smart-panels-section .smart-voice-panel-cont .smart-voice-main-cont .smart-voice-body-cont .smart-voice-btn-cont {
+    justify-content: center;
+  }
+  body .smart-panels-section .smart-voice-panel-cont .smart-voice-main-cont .smart-voice-body-cont .smart-voice-text-cont1 {
+    width: 40%;
+  }
+  body .smart-panels-section .smart-voice-panel-cont .smart-voice-main-cont .smart-voice-body-cont .smart-voice-text-cont2 {
+    width: 45%;
+  }
+  body .smart-panels-section .smart-voice-panel-cont .smart-voice-main-cont .smart-voice-body-cont .smart-voice-btn-cont {
+    width: 20%;
+  }
+  body .smart-energy-section {
+    margin-bottom: 3%;
+    background-color: #F9F3EF;
+    border-radius: 1.875em;
+    box-shadow: 15px 15px 34px #c7c2bf;
+    box-shadow: -15px -15px 34px #ffffff;
+  }
+  body .smart-energy-section .smart-energy-main-cont {
+    width: 100%;
+    padding: 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  body .smart-energy-section .smart-energy-main-cont .subheader-voice {
+    padding-left: 5%;
+    width: 100%;
+  }
+  body .smart-energy-section .smart-energy-main-cont .smart-energy-body-cont {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  body .smart-energy-section .smart-energy-main-cont .smart-energy-body-cont .smart-energy-body-icons-cont,
+  body .smart-energy-section .smart-energy-main-cont .smart-energy-body-cont .smart-energy-text-cont {
+    display: flex;
+    justify-content: space-around;
+  }
+  body .smart-energy-section .smart-energy-main-cont .smart-energy-body-cont .smart-energy-body-icons-cont {
+    width: 50%;
+  }
+  body .smart-energy-section .smart-energy-main-cont .smart-energy-body-cont .smart-energy-body-icons-cont .panel-energy-icon {
+    font-size: 5em;
+  }
+  body .smart-energy-section .smart-energy-main-cont .smart-energy-body-cont .smart-energy-text-cont {
+    width: 50%;
+    flex-direction: column;
+    padding-left: 10%;
+  }
+  body .smart-energy-section .smart-energy-main-cont .smart-energy-body-cont .smart-energy-text-cont .orange-label-btn {
+    margin-top: 8%;
+    padding: 2%;
+    width: 70%;
+  }
+  body .dialog-main-cont {
+    padding: 5%;
+    position: fixed;
+    z-index: 20;
+    top: 40%;
+    left: 25%;
+    background-color: #F9F3EF;
+    box-shadow: 15px 15px 34px #c7c2bf;
+    border-radius: 1.875em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  body .dialog-main-cont #energy-usage-header-large {
+    margin-bottom: 4%;
+  }
+  body .dialog-main-cont .orange-label-btn {
+    width: 40%;
+  }
+}
+@media screen and (min-width: 834px) {
+  body .main-header-section {
+    padding-left: 7%;
+  }
+  body .home-room-section {
+    margin-top: 3%;
+    margin-bottom: 26%;
+  }
+  body .home-room-section .home-room-main-cont .home-room-panel-cont .home-room-panel-grid {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(2, 15.1em);
+    grid-template-rows: repeat(2, 20.3em);
+    row-gap: 0.9375em;
+    -moz-column-gap: 3.125em;
+         column-gap: 3.125em;
+  }
+  body .home-room-section .home-room-main-cont .home-room-panel-cont .home-room-panel-grid .home-room-panel-grid-item {
+    flex-direction: column;
+    padding: 6% 3%;
+  }
+  body .home-room-section .home-room-main-cont .home-room-panel-cont .home-room-panel-grid .home-room-panel-grid-item .home-room-device-info-cont .main-subheader .small-subheader {
+    font-size: 1.4em;
+    font-family: "Karla", sans-serif;
+  }
+  body .home-room-section .home-room-main-cont .home-room-panel-cont .home-room-panel-grid .home-room-panel-grid-item .room-panel-icon {
+    font-size: 5.625em;
+  }
+  body .heater-activity-section {
+    width: 65%;
+    margin-bottom: 2%;
+  }
+  body .heater-energy-section {
+    margin-top: 2%;
+    padding-bottom: 20%;
+  }
+  body .heater-energy-section .heater-energy-main-grid {
+    grid-template-columns: repeat(2, 14.875em);
+    grid-template-rows: repeat(1, 14.4375em);
+    -moz-column-gap: 1.875em;
+         column-gap: 1.875em;
+    row-gap: 1.875em;
+  }
+}
+@media screen and (min-width: 1280px) {
+  body .navbar {
+    position: absolute;
+    height: 100vh;
+    width: 132px;
+    position: fixed;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  body section {
+    width: 80%;
+    margin-left: 15%;
+  }
+  body .home-panels-section {
+    margin-bottom: 0;
+  }
+  body .home-panels-section .home-panels-cont {
+    flex-direction: row;
+  }
+  body .home-panels-section .home-panels-cont .home-notifs-cont {
+    width: 25%;
+    padding: 2% 1% 3% 1%;
+    margin-bottom: 2%;
+    margin-top: 1.5%;
+    margin-right: 3%;
+  }
+  body .home-panels-section .home-panels-cont .home-notifs-cont .home-notifs-list-cont {
+    flex-direction: column;
+  }
+  body .home-panels-section .home-panels-cont .home-notifs-cont .home-notifs-list-cont .fa-bell {
+    display: none;
+  }
+  body .home-panels-section .home-panels-cont .home-notifs-cont .home-notifs-list-cont .home-notif-list {
+    width: 100%;
+    padding-left: 5%;
+    margin-top: 2%;
+  }
+  body .home-panels-section .home-panels-cont .home-panels-small-cont {
+    width: 66%;
+    height: 12.3125em;
+  }
+  body .home-room-section {
+    width: 64em;
+    margin-left: 15%;
+    margin-bottom: 4%;
+  }
+  body .home-room-section .home-room-main-cont {
+    width: 100%;
+  }
+  body .home-room-section .home-room-main-cont .home-room-panel-cont .home-room-panel-grid {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3, 14.875em);
+    grid-template-rows: repeat(1, 20.4375em);
+    row-gap: 0;
+    -moz-column-gap: 3.25em;
+         column-gap: 3.25em;
+  }
+  body .home-room-section .home-room-main-cont .home-room-panel-cont .home-room-panel-grid .home-room-panel-grid-item .home-room-device-info-cont .main-subheader .small-subheader {
+    font-size: 1.3em;
+  }
+  body .home-room-section .home-room-main-cont .home-room-panel-cont .home-room-panel-grid .home-room-panel-grid-item .room-panel-icon {
+    font-size: 5.625em;
+  }
+  body .heater-activity-section {
+    width: 42%;
+    margin-left: 14%;
+    margin-bottom: 2%;
+    margin-top: 4%;
+  }
+  body .heater-energy-section {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    padding-bottom: 3%;
+  }
+}
+.home-room-section .home-room-main-cont .home-room-panel-cont .blue-icon-btn:active {
+  transition: background-color 0.2s ease;
+  background-color: #5277CE;
+}
+.home-room-section .home-room-main-cont .home-room-btn-cont .orange-label-btn:active {
+  transition: background-color 0.2s ease;
+  background-color: #99B1E9;
+}/*# sourceMappingURL=style.css.map */
